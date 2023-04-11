@@ -10,7 +10,9 @@
 
     </head>
     <body>
-
+        <div class="add ">
+            <a href="form.php"> Add New</a>
+        </div>
 <?php
 $servername="localhost";
 $username="root";
@@ -36,8 +38,18 @@ if($conn->connect_error){
             <div class="attach flex  font-extrabold bg-sky-600 text-white border-2 border-sky-600 rounded-full">
 
                 <div class="title m-2 w-full ">
-                    <?php echo $row['id'];?>)
+                    <?php echo $row['id'];?>
                     <?php echo $row['title'];?>
+                    <div class="edit flex justify-end">
+                      <a href="editform.php?id=<?php echo $row['id'];?>&rating=<?php echo $row['rating'];?>&title=<?php echo $row['title'];?>&desc=<?php echo $row['desc'];?>"> 
+                      <i class="fa fa-edit "></i>
+                      </a>
+                      <a href="delete.php?id=<?php echo $row['id']?>">
+                        <i class="fa fa-trash"></i>
+                     </a>
+
+                       
+                    </div>
                  </div>
             </div>
 
@@ -46,14 +58,39 @@ if($conn->connect_error){
             </div>
 
             <div class="rate">
+
             
-<div class="flex justify-center items-center gap-2 p-2 bg-white rounded-md shadow-lg">
+<?php 
+if($row["rating"] == "4") {
+        ?>
+        
+        <div class="flex justify-center items-center gap-2 p-2 bg-white rounded-md shadow-lg">
+
   <span class="text-yellow-500 text-2xl">&#9733;</span>
   <span class="text-yellow-500 text-2xl">&#9733;</span>
   <span class="text-yellow-500 text-2xl">&#9733;</span>
   <span class="text-yellow-500 text-2xl">&#9733;</span>
-  <span class="text-yellow-500 text-2xl">&#9733;</span>
+  <span class="text-grey-200 text-2xl">&#9733;</span>
 </div>
+
+        
+        <?php
+} else {
+?>
+        <div class="flex justify-center items-center gap-2 p-2 bg-white rounded-md shadow-lg">
+
+<span class="text-yellow-500 text-2xl">&#9733;</span>
+<span class="text-yellow-500 text-2xl">&#9733;</span>
+<span class="text-yellow-500 text-2xl">&#9733;</span>
+<span class="text-yellow-500 text-2xl">&#9733;</span>
+<span class="text-yellow-400 text-2xl">&#9733;</span>
+</div>
+
+<?php
+
+}
+
+?>
 
             </div>
             </div>
