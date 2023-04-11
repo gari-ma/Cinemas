@@ -13,8 +13,8 @@
 <body>
     
 
-<form action="create.php" class="">
-<input type="number" value="<?php echo $_GET['id'];?>" hidden>
+<form action="edit.php" class="">
+<input type="number" name ="id" value="<?php echo $_GET['id'];?>" hidden>
 
  <label for="title"> Title </label>
  <input type="text" name="title" value="<?php echo $_GET['title'];?>" placeholder="Enter the title" required>

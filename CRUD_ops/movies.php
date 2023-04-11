@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="add ">
-            <a href="form.php"> Add New</a>
+            <a href="addform.php"> Add New</a>
         </div>
 <?php
 $servername="localhost";

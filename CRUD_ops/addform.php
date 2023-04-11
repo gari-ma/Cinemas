@@ -13,17 +13,17 @@
 <body>
     
 
-<form action="create.php" class="">
+<form action="create.php" class=" flex flex-col">
 
  <label for="title"> Title </label>
- <input type="text" name=title placeholder="Enter the title" required>
+ <input type="text" class=" border-2 border-red-400" name="title"  placeholder="Enter the title" required>
 
  <label for="title"> Rating </label>
- <input type="number" name=rating placeholder="" max="5" min="1" required>
+ <input type="number" class=" border-2 border-red-400" name="rating" placeholder="" max="5" min="1" required>
 
  <label for="title"> Description </label>
- <textarea name="description"> </textarea>
- <button  class=""type="submit"> Submit</button>
+ <textarea class=" border-2 border-red-400"  name="description"> </textarea>
+ <button  class=" border-2 border-red-400"type="submit"> Submit</button>
 </form>
 </body>
 </html>
